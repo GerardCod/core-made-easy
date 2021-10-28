@@ -5,8 +5,10 @@ public class PowerBill {
   private String name;
   private String address;
 
-  public PowerBill() {
-
+  public PowerBill(int meterNo, String name, String address) {
+    this.meterNo = meterNo;
+    this.name = name;
+    this.address = address;
   }
 
   @Override
