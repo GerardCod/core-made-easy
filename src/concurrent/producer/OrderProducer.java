@@ -1,6 +1,5 @@
 package concurrent.producer;
 
-import java.util.concurrent.BlockingDeque;
 import java.util.concurrent.BlockingQueue;
 
 public class OrderProducer implements Runnable {
