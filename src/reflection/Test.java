@@ -1,5 +1,6 @@
 package reflection;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -42,6 +43,12 @@ public class Test {
       numOne.set(obj, 18);
       System.out.println(numOne.getDouble(obj));
 
+      Annotation[] annotations = className.getAnnotations();
+      System.out.println(Arrays.toString(annotations));
+
+      MyAnnotation myAnnotation = (MyAnnotation) annotations[0];
+      System.out.println(myAnnotation.valueOne());
+      System.out.println(myAnnotation.valueTwo());
     } catch (ClassNotFoundException e) {
       e.printStackTrace();
     } catch (NoSuchMethodException e) {
